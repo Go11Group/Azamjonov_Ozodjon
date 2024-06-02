@@ -1,0 +1,135 @@
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "commit 1st main"
+[master (root-commit) 405de6a] commit 1st main
+ 2 files changed, 15 insertions(+)
+ create mode 100644 dz_1
+ create mode 100644 main.go
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch feature_1
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch feature_2
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch
+  feature_1
+  feature_2
+* master
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git checkout feature_1
+Switched to branch 'feature_1'
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ branch
+Command 'branch' not found, but can be installed with:
+sudo apt install rheolef
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branh
+git: 'branh' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch
+* feature_1
+  feature_2
+  master
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git add .
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ gi commit -m "first commit in f_1"
+gi: command not found
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "first commit in f_1"
+[feature_1 164df1b] first commit in f_1
+ 3 files changed, 18 insertions(+), 2 deletions(-)
+ create mode 100644 go.mod
+ create mode 100644 task/task.go
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git checkout feature_2
+Switched to branch 'feature_2'
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git add .
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "first commit in f_2"
+[feature_2 4f0f971] first commit in f_2
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+ create mode 100644 nmadur/nmadur.go
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git checkout feature_2
+Already on 'feature_2'
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git checkout feature_1
+Switched to branch 'feature_1'
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git add .
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "commit"
+On branch feature_1
+nothing to commit, working tree clean
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git status
+On branch feature_1
+nothing to commit, working tree clean
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git add .
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "commited a"
+[feature_1 8ac6da1] commited a
+ 1 file changed, 1 insertion(+)
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git status
+On branch feature_1
+nothing to commit, working tree clean
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git checkout master
+Switched to branch 'master'
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git merge feature_1
+Auto-merging main.go
+CONFLICT (content): Merge conflict in main.go
+Automatic merge failed; fix conflicts and then commit the result.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch -d feature_1
+error: The branch 'feature_1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature_1'.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git merge feature_1
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git merge feature_1
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch -d feature_2
+Deleted branch feature_2 (was a193921).
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch
+  feature_1
+* master
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch -d feature_1
+error: The branch 'feature_1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D feature_1'.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ gi merge feature_1
+gi: command not found
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git merge feature_1
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git merge feature_1
+Already up to date.
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git log
+commit 1353c3a99e74bb039aa9558efd8bf653ef9dd16e (HEAD -> master)
+Merge: b190d3e 8ac6da1
+Author: jons <hajrullaevfazliddin058@gmail.com>
+Date:   Tue May 21 14:29:58 2024 +0500
+
+    Merge branch 'feature_1'
+
+commit 8ac6da1105aa4106f9011ca30927f83b4f809063 (feature_1)
+Author: jons <hajrullaevfazliddin058@gmail.com>
+Date:   Tue May 21 14:26:20 2024 +0500
+
+    commited a
+
+commit b190d3e1229ba7902713e6f222b0e1e0f055af60
+Merge: 164df1b a193921
+Author: jons <hajrullaevfazliddin058@gmail.com>
+Date:   Tue May 21 14:21:59 2024 +0500
+
+    Merge branch 'feature_2'
+
+commit a1939214a636d7a8e73f27210a55b58346d0dd76
+
+[1]+  Stopped                 git log
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ 
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git add .
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git commit -m "sommited fully"
+[master 0442887] sommited fully
+ 1 file changed, 9 deletions(-)
+ delete mode 100644 nmadur/nmadur.go
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch -d feature_1
+Deleted branch feature_1 (was 8ac6da1).
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git barge
+git: 'barge' is not a git command. See 'git --help'.
+
+The most similar command is
+	merge
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git branch
+* master
+jons@jons:~/Documents/dars_2_oy/lesson_1/homework$ git log
+

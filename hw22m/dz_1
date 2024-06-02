@@ -1,0 +1,8 @@
+git branch feature
+git checkout feature
+
+git add .
+git commit -m "changed"
+
+git checkout master
+git merge feature
