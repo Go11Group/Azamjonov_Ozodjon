@@ -1,0 +1,14 @@
+Planning Time: 0.042 ms
+ Execution Time: 21.084 ms
+
+ Planning Time: 0.059 ms
+ Execution Time: 21.242 ms
+
+  Planning Time: 0.137 ms
+  Execution Time: 0.488 ms
+
+  0.1135
+  0.3055
+
+   Planning Time: 0.090 ms
+   Execution Time: 0.123 ms
