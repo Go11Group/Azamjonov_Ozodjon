@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	serverAddr, err := net.ResolveUDPAddr("udp", "localhost:9090")
+	serverAddr, err := net.ResolveUDPAddr("udp", "localhost:8080")
 	if err != nil {
 		fmt.Println("Server manzilini aniqlashda xato:", err)
 		return
@@ -21,7 +21,7 @@ func main() {
 
 	go receiveMessages(conn)
 
-	message := "Salom, server!"
+	message := "salom bolam"
 	_, err = conn.Write([]byte(message))
 	if err != nil {
 		fmt.Println("Xabarni yuborishda xato:", err)
@@ -33,11 +33,15 @@ func main() {
 		fmt.Print("Yozing: ")
 		var input string
 		fmt.Scanln(&input)
+		if input == "exit" {
+			break
+		}
 		_, err = conn.Write([]byte(input))
 		if err != nil {
 			fmt.Println("Xabarni yuborishda xato:", err)
 			return
 		}
+		fmt.Print("Yozing: ")
 	}
 }
 
@@ -50,5 +54,6 @@ func receiveMessages(conn *net.UDPConn) {
 			return
 		}
 		fmt.Printf("Serverdan javob: %s\n", string(buffer[:n]))
+		fmt.Print("Yozing: ")
 	}
 }

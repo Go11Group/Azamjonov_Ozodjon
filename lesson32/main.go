@@ -2,54 +2,27 @@ package main
 
 import (
 	"fmt"
-	"net"
-	"sync"
+	"net/http"
 )
 
-var clients = make(map[string]net.Addr)
-var mutex = &sync.Mutex{}
-
 func main() {
-	conn, err := net.ListenPacket("udp", ":9090")
+	mux := http.NewServeMux()
+	mux.HandleFunc("GET /hello", hello)
+
+	err := http.ListenAndServe(":8080", mux)
 	if err != nil {
-		fmt.Println("Tinglashni sozlashda xato:", err)
-		return
-	}
-	defer conn.Close()
-	fmt.Println("Server 9090-portda tinglamoqda...")
-
-	buffer := make([]byte, 1024)
-
-	for {
-		n, addr, err := conn.ReadFrom(buffer)
-		if err != nil {
-			fmt.Println("Xabarni o'qishda xato:", err)
-			continue
-		}
-
-		message := string(buffer[:n])
-		fmt.Printf("Qabul qilingan xabar: %s\n", message)
-		addClient(addr)
-		broadcastMessage(conn, addr, message)
+		fmt.Println(err)
 	}
 }
 
-func addClient(addr net.Addr) {
-	mutex.Lock()
-	defer mutex.Unlock()
-	clients[addr.String()] = addr
-}
+func hello(w http.ResponseWriter, r *http.Request) {
 
-func broadcastMessage(conn net.PacketConn, senderAddr net.Addr, message string) {
-	mutex.Lock()
-	defer mutex.Unlock()
-	for _, clientAddr := range clients {
-		if clientAddr.String() != senderAddr.String() {
-			response := fmt.Sprintf("%s => %s", senderAddr.String(), message)
-			_, err := conn.WriteTo([]byte(response), clientAddr)
-			if err != nil {
-				fmt.Println("Xabarni yozishda xato:", err)
-			}
-		}
+	fmt.Println("URL:", r.URL)
+	fmt.Println("Host:", r.Host)
+	fmt.Println("Method:", r.Method)
+
+	_, err := w.Write([]byte("IN HELLOOOO"))
+	if err != nil {
+		fmt.Println("Error writing response:", err)
 	}
 }
