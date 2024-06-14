@@ -1,13 +1,16 @@
 package model
 
-import "time"
+import (
+	"github.com/google/uuid"
+	"time"
+)
 
 type Lessons struct {
-	LessonId  string     `json:"lesson_id"`
-	CourseId  string     `json:"course_id"`
-	Title     string     `json:"title"`
-	Content   string     `json:"content"`
-	CreatedAt string     `json:"created_at"`
-	UpdatedAt string     `json:"updated_at"`
-	DeletedAt *time.Time `json:"deleted_at"`
+	LessonId  string    `json:"lesson_id"`
+	CourseId  uuid.UUID `json:"course_id"`
+	Title     string    `json:"title"`
+	Content   string    `json:"content"`
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+	DeletedAt int       `json:"deleted_at"`
 }
