@@ -1,0 +1,52 @@
+package main
+
+/*
+	atto
+
+	users
+		id
+		name
+		phone
+		age
+
+	card
+		id
+		number
+		user_id
+
+	transaction
+		id
+		card_id
+		amount
+		terminal_id uuid default null
+		transaction_type enum('credit', 'debit')
+
+	station
+		id
+		name
+
+	terminal
+		id
+		station_id
+
+// Balance
+
+*/
+
+1
+56
+7000
+null
+debit
+
+3
+58
+776000
+null
+debit
+
+65
+56
+1700
+9876543
+credit
