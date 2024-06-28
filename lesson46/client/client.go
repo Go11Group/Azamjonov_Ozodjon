@@ -14,25 +14,28 @@ import (
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Println("Usage: go run client.go <service> <method> [<args>...]")
-		return
-	}
+	// Set default values for service and method
+	service := "weather"          // Default service
+	method := "GetCurrentWeather" // Default method
 
-	service := os.Args[1]
-	method := os.Args[2]
+	if len(os.Args) >= 2 {
+		service = os.Args[1]
+	}
+	if len(os.Args) >= 3 {
+		method = os.Args[2]
+	}
 
 	switch service {
 	case "weather":
-		runWeatherServiceClient(method, os.Args[3:])
+		runWeatherServiceClient(method)
 	case "transport":
-		runTransportServiceClient(method, os.Args[3:])
+		runTransportServiceClient(method)
 	default:
 		fmt.Println("Unknown service:", service)
 	}
 }
 
-func runWeatherServiceClient(method string, args []string) {
+func runWeatherServiceClient(method string) {
 	conn, err := grpc.Dial("localhost:50051", grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)
@@ -45,13 +48,13 @@ func runWeatherServiceClient(method string, args []string) {
 
 	switch method {
 	case "GetCurrentWeather":
-		r, err := c.GetCurrentWeather(ctx, &pbWeather.CurrentWeatherRequest{Location: "Tashkent"})
+		r, err := c.GetCurrentWeather(ctx, &pbWeather.CurrentWeatherRequest{Location: "DefaultLocation"})
 		if err != nil {
 			log.Fatalf("could not get current weather: %v", err)
 		}
 		fmt.Printf("Current Weather: Temperature: %.1f, Humidity: %.1f%%, Wind Speed: %.1f m/s\n", r.Temperature, r.Humidity, r.WindSpeed)
 	case "GetWeatherForecast":
-		r, err := c.GetWeatherForecast(ctx, &pbWeather.WeatherForecastRequest{Location: "Tashkent", Days: 2})
+		r, err := c.GetWeatherForecast(ctx, &pbWeather.WeatherForecastRequest{Location: "DefaultLocation", Days: 2})
 		if err != nil {
 			log.Fatalf("could not get weather forecast: %v", err)
 		}
@@ -60,7 +63,7 @@ func runWeatherServiceClient(method string, args []string) {
 			fmt.Printf("%s: Temperature: %.1f, Humidity: %.1f%%, Wind Speed: %.1f m/s\n", forecast.Date, forecast.Temperature, forecast.Humidity, forecast.WindSpeed)
 		}
 	case "ReportWeatherCondition":
-		r, err := c.ReportWeatherCondition(ctx, &pbWeather.ReportWeatherConditionRequest{Location: "Tashkent", Condition: "Sunny"})
+		r, err := c.ReportWeatherCondition(ctx, &pbWeather.ReportWeatherConditionRequest{Location: "DefaultLocation", Condition: "Sunny"})
 		if err != nil {
 			log.Fatalf("could not report weather condition: %v", err)
 		}
@@ -70,7 +73,7 @@ func runWeatherServiceClient(method string, args []string) {
 	}
 }
 
-func runTransportServiceClient(method string, args []string) {
+func runTransportServiceClient(method string) {
 	conn, err := grpc.Dial("localhost:50052", grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		log.Fatalf("did not connect: %v", err)

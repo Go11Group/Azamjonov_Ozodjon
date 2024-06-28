@@ -3,7 +3,7 @@ package storage
 import (
 	"database/sql"
 
-	pb "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport" // Import your generated transport proto package
+	pb "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport"
 )
 
 type TransportStorage struct {

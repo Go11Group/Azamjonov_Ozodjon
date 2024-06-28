@@ -1,31 +1,38 @@
 package main
 
 import (
-	"github.com/Azamjonov_Ozodjon/lesson46/storage"
-	"github.com/Azamjonov_Ozodjon/lesson46/storage/postgres"
+	"fmt"
 	"log"
+	"net"
+
+	pb_transport "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport"
+	pb_weather "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/weather"
+	"github.com/Azamjonov_Ozodjon/lesson46/service"
+	"github.com/Azamjonov_Ozodjon/lesson46/storage/postgres"
+	"google.golang.org/grpc"
 )
 
 func main() {
 	db, err := postgres.Connection()
 	if err != nil {
-		log.Fatalf("Failed to connect to the database: %v", err)
+		log.Fatalf("Failed to connect to database: %v", err)
 	}
 	defer db.Close()
 
-	weatherStorage := storage.NewWeatherStorage(db)
-	transportStorage := storage.NewTransportStorage(db)
+	weatherService := service.NewWeatherService(db)
+	transportService := service.NewTransportService(db)
 
-	// Example calls to storage methods
-	weather, err := weatherStorage.GetCurrentWeather("New York")
+	listener, err := net.Listen("tcp", ":50051")
 	if err != nil {
-		log.Fatalf("Failed to get current weather: %v", err)
+		panic(err)
 	}
-	log.Printf("Current Weather: %+v\n", weather)
 
-	schedules, err := transportStorage.GetBusSchedule("42")
-	if err != nil {
-		log.Fatalf("Failed to get bus schedule: %v", err)
+	grpcServer := grpc.NewServer()
+	pb_weather.RegisterWeatherServiceServer(grpcServer, weatherService)
+	pb_transport.RegisterTransportServiceServer(grpcServer, transportService)
+
+	fmt.Println("Server is running on port :50051")
+	if err := grpcServer.Serve(listener); err != nil {
+		panic(err)
 	}
-	log.Printf("Bus Schedules: %+v\n", schedules)
 }

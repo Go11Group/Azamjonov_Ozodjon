@@ -2,17 +2,19 @@ package service
 
 import (
 	"context"
+	"database/sql"
 	"log"
 
-	pb "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport" // Import your generated transport proto package
+	pb "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport"
 	"github.com/Azamjonov_Ozodjon/lesson46/storage"
 )
 
 type TransportService struct {
-	storage *storage.TransportStorage
+	pb.UnimplementedTransportServiceServer // Embed the unimplemented server
+	storage                                *storage.TransportStorage
 }
 
-func NewTransportService(db *storage.DB) *TransportService {
+func NewTransportService(db *sql.DB) *TransportService {
 	return &TransportService{
 		storage: storage.NewTransportStorage(db),
 	}
@@ -25,11 +27,7 @@ func (s *TransportService) GetBusSchedule(ctx context.Context, req *pb.BusSchedu
 		return nil, err
 	}
 
-	response := &pb.BusScheduleResponse{
-		Schedules: schedules,
-	}
-
-	return response, nil
+	return &pb.BusScheduleResponse{Schedules: schedules}, nil
 }
 
 func (s *TransportService) TrackBusLocation(ctx context.Context, req *pb.BusLocationRequest) (*pb.BusLocationResponse, error) {
@@ -39,11 +37,7 @@ func (s *TransportService) TrackBusLocation(ctx context.Context, req *pb.BusLoca
 		return nil, err
 	}
 
-	response := &pb.BusLocationResponse{
-		Location: location,
-	}
-
-	return response, nil
+	return &pb.BusLocationResponse{Location: location}, nil
 }
 
 func (s *TransportService) ReportTrafficJam(ctx context.Context, req *pb.TrafficJamReportRequest) (*pb.TrafficJamReportResponse, error) {
