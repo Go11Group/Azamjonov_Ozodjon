@@ -2,51 +2,35 @@ package storage
 
 import (
 	"database/sql"
-
-	pb "github.com/Azamjonov_Ozodjon/lesson46/genproto/generator/transport"
+	"fmt"
 )
 
-type TransportStorage struct {
-	db *sql.DB
+type StorageRepo struct {
+	DB *sql.DB
 }
 
-func NewTransportStorage(db *sql.DB) *TransportStorage {
-	return &TransportStorage{db: db}
+type trow struct {
+	From string
+	To   string
 }
 
-func (s *TransportStorage) GetBusSchedule(busNumber string) ([]*pb.BusSchedule, error) {
-	query := `SELECT time, destination FROM bus_schedule WHERE bus_number = $1 ORDER BY time`
-	rows, err := s.db.Query(query, busNumber)
-	if err != nil {
-		return nil, err
-	}
-	defer rows.Close()
+type jrow struct{ IsTraficJam bool }
 
-	var schedules []*pb.BusSchedule
-	for rows.Next() {
-		var schedule pb.BusSchedule
-		if err := rows.Scan(&schedule.Time, &schedule.Destination); err != nil {
-			return nil, err
-		}
-		schedules = append(schedules, &schedule)
-	}
-	return schedules, nil
+func NewStorageRepo(db *sql.DB) StorageRepo {
+	return StorageRepo{db}
 }
 
-func (s *TransportStorage) TrackBusLocation(busNumber string) (string, error) {
-	query := `SELECT location FROM bus_location WHERE bus_number = $1 ORDER BY timestamp DESC LIMIT 1`
-	row := s.db.QueryRow(query, busNumber)
-
-	var location string
-	if err := row.Scan(&location); err != nil {
-		return "", err
-	}
-
-	return location, nil
+func (s *StorageRepo) GetScheduleByNumber(number int) (string, error) {
+	r := trow{}
+	row := s.DB.QueryRow("select * from bus where number = $1", number)
+	row.Scan(&r.From, &r.To)
+	str := fmt.Sprint(r)
+	return str, row.Err()
 }
 
-func (s *TransportStorage) ReportTrafficJam(location, description string) error {
-	query := `INSERT INTO traffic_jam (location, description, timestamp) VALUES ($1, $2, NOW())`
-	_, err := s.db.Exec(query, location, description)
-	return err
+func (s *StorageRepo) IsTraficJam(street string) (bool, error) {
+	r := jrow{}
+	row := s.DB.QueryRow("select * from trafic_jam where street = $1", street)
+	row.Scan(&r.IsTraficJam)
+	return r.IsTraficJam, row.Err()
 }

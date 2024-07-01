@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option go_package = "generate/weather";
+
+package weather;
+
+service WeatherService{
+    rpc GetCurrentWeather(GetWeatherRequest) returns (GetWheatherRespons);
+    rpc GetWeatherForecast(GetWeatherRequest) returns (GetWeatherForecastrRespons);
+    rpc RepostWeatherCondition(GetWeatherRequest) returns (GetRepostrRespons);
+}
+
+message GetWeatherRequest{
+    string day = 1;
+}
+
+message GetWheatherRespons {
+ int32 temperature = 1;
+}
+
+message GetWeatherForecastrRespons{
+    repeated Weather weather = 1;
+}
+
+message GetRepostrRespons{
+    repeated Weather weather = 1;
+}
+
+message Weather {
+    int32 Temperature = 1;
+    string humanity = 2;
+    int32 wind_speed = 3;
+}
