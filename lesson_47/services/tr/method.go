@@ -8,9 +8,19 @@ import (
 func (t *TransportRepo) GetBusSchedule(ctx context.Context, in *pb.BusNumber) (*pb.BusSchudle, error) {
 	location := []*pb.Location{
 		{
-			Location: "any where",
-			Time:     "every 27 minutes",
+			Location: "Somewhere",
+			Time:     "every 24 minutes",
 		},
 	}
 	return &pb.BusSchudle{BusNumber: in.Bus, Stations: location}, nil
+}
+
+func (t *TransportRepo) TrucBusLocation(ctx context.Context, in *pb.Location) (*pb.BusWithLocations, error) {
+	bus := []*pb.Bus{
+		{
+			Number: 28,
+			Time:   "every 27 minutes",
+		},
+	}
+	return &pb.BusWithLocations{Busses: bus}, nil
 }
