@@ -1,0 +1,9 @@
+insert into examples(name) values ('Saidakbar');
+insert into examples(name) values ('Muhammadjon');
+insert into examples(name) values ('Isroil');
+insert into examples(name) values ('Iskandar');
+insert into examples(name) values ('Musoxon');
+insert into examples(name) values ('Ali');
+insert into examples(name) values ('Vali');
+insert into examples(name) values ('Qo''zivoy');
+insert into examples(name) values ('Qo''chqor');
