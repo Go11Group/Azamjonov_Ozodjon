@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+option go_package = "genproto/protos";
+
+package protos;
+
+service WeatherService {
+    rpc GetCurrentWeather(CurrentWeatherRequest) returns (CurrentWeatherResponse) {}
+    rpc GetWeatherForecast(ForecastRequest) returns (ForecastResponse) {}
+    rpc ReportWeatherCondition(ConditionReport) returns (ConditionResponse) {}
+}
+
+service TransportService {
+    rpc GetBusSchedule(BusScheduleRequest) returns (BusScheduleResponse) {}
+    rpc TrackBusLocation(BusLocationRequest) returns (BusLocationResponse) {}
+    rpc ReportTrafficJam(TrafficJamReport) returns (TrafficJamResponse) {}
+}
+message BusScheduleRequest {
+    string aftobusraqami = 1;
+    string bekatlar = 2;
+
+}
+message BusScheduleResponse {
+    string aftobusraqami = 1;
+    string bekatlar = 2;
+    string jadval = 3;
+}
+
+message BusLocationRequest {
+   string joylashuvi = 1;
+}
+
+message BusLocationResponse {
+    string joylashuvi = 1;
+    string aftobuzid = 2; 
+}
+
+message TrafficJamReport {
+    string tirbatliklar = 1;
+}
+
+message TrafficJamResponse {
+    string tirbatliklar = 1;
+    string habar = 2;
+}
+
+message CurrentWeatherRequest {
+    string location = 1; 
+}
+
+message CurrentWeatherResponse {
+    string location = 1;
+    string obuhavo = 2; 
+    double harorat = 3; 
+}
+
+message ForecastRequest {
+    string location = 1;
+    int32 kunlar = 2;
+}
+
+message ForecastResponse {
+    string location = 1;
+    repeated Forecast forecast = 2;
+}
+
+message Forecast {
+    string date = 1;
+    string weather = 2;
+}
+
+message ConditionReport {
+    string location = 1;
+    string weather = 2; 
+    int32 temperature = 3;
+}
+
+message ConditionResponse {
+    bool success = 1;
+    string message = 2;
+}
