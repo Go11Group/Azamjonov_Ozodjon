@@ -1,0 +1,1 @@
+DROP TABLE if exists challenge_participation cascade;

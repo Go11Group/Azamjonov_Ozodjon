@@ -1,0 +1,1295 @@
+basePath: /
+definitions:
+  items_service.CreateEcoChallengeRequest:
+    properties:
+      description:
+        type: string
+      end_date:
+        type: string
+      reward_points:
+        type: integer
+      start_date:
+        type: string
+      title:
+        type: string
+    type: object
+  items_service.CreateEcoChallengeResponse:
+    properties:
+      eco_challenge:
+        $ref: '#/definitions/items_service.EcoChallenge'
+    type: object
+  items_service.CreateEcoTipRequest:
+    properties:
+      content:
+        type: string
+      title:
+        type: string
+    type: object
+  items_service.CreateEcoTipResponse:
+    properties:
+      eco_tip:
+        $ref: '#/definitions/items_service.EcoTip'
+    type: object
+  items_service.CreateItemCategoryManageRequest:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    type: object
+  items_service.CreateItemCategoryManageResponse:
+    properties:
+      item_category:
+        $ref: '#/definitions/items_service.ItemCategory'
+    type: object
+  items_service.CreateItemRequest:
+    properties:
+      category_id:
+        type: string
+      condition:
+        type: string
+      description:
+        type: string
+      name:
+        type: string
+      owner_id:
+        type: string
+      status:
+        type: string
+      swap_preference:
+        type: string
+    type: object
+  items_service.CreateItemResponse:
+    properties:
+      item:
+        $ref: '#/definitions/items_service.Item'
+    type: object
+  items_service.CreateParticipateChallengeRequest:
+    properties:
+      challengeId:
+        type: string
+      status:
+        type: string
+      userId:
+        type: string
+    type: object
+  items_service.CreateParticipateChallengeResponse:
+    properties:
+      challengeId:
+        type: string
+      joinedAt:
+        type: string
+      status:
+        type: string
+      userId:
+        type: string
+    type: object
+  items_service.CreateRatingRequest:
+    properties:
+      comment:
+        type: string
+      rater_id:
+        type: string
+      rating:
+        type: number
+      swap_id:
+        type: string
+      user_id:
+        type: string
+    type: object
+  items_service.CreateRatingResponse:
+    properties:
+      rating:
+        $ref: '#/definitions/items_service.Rating'
+    type: object
+  items_service.CreateRecyclingCenterRequest:
+    properties:
+      accepted_materials:
+        type: string
+      address:
+        type: string
+      contact_number:
+        type: string
+      name:
+        type: string
+      working_hours:
+        type: string
+    type: object
+  items_service.CreateRecyclingCenterResponse:
+    properties:
+      recycling_center:
+        $ref: '#/definitions/items_service.RecyclingCenter'
+    type: object
+  items_service.CreateRecyclingSubmissionsRequest:
+    properties:
+      center_id:
+        type: string
+      itemes:
+        items:
+          $ref: '#/definitions/items_service.Itemes'
+        type: array
+      user_id:
+        type: string
+    type: object
+  items_service.CreateRecyclingSubmissionsResponse:
+    properties:
+      center_id:
+        type: string
+      created_at:
+        type: string
+      eco_points_earned:
+        type: integer
+      id:
+        type: string
+      itemes:
+        items:
+          $ref: '#/definitions/items_service.Itemes'
+        type: array
+      user_id:
+        type: string
+    type: object
+  items_service.CreateSwapRequest:
+    properties:
+      message:
+        type: string
+      offered_item_id:
+        type: string
+      owner_id:
+        type: string
+      requested_item_id:
+        type: string
+      requester_id:
+        type: string
+      status:
+        type: string
+    type: object
+  items_service.CreateSwapResponse:
+    properties:
+      swap:
+        $ref: '#/definitions/items_service.Swap'
+    type: object
+  items_service.EcoChallenge:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      end_date:
+        type: string
+      id:
+        type: string
+      reward_points:
+        type: integer
+      start_date:
+        type: string
+      title:
+        type: string
+    type: object
+  items_service.EcoTip:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  items_service.GetAddEcoTipsRequest:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+    type: object
+  items_service.GetAddEcoTipsResponse:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      tips:
+        items:
+          $ref: '#/definitions/items_service.EcoTip'
+        type: array
+      total:
+        type: integer
+    type: object
+  items_service.GetChangeSwapRequest:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      status:
+        type: string
+    type: object
+  items_service.GetChangeSwapResponse:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      swaps:
+        items:
+          $ref: '#/definitions/items_service.Swap'
+        type: array
+      total:
+        type: integer
+    type: object
+  items_service.GetItemRequest:
+    properties:
+      id:
+        type: string
+    type: object
+  items_service.GetItemsRequest:
+    properties:
+      category_id:
+        type: string
+      condition:
+        type: string
+      id:
+        type: string
+      limit:
+        type: integer
+      name:
+        type: string
+      owner_id:
+        type: string
+      page:
+        type: integer
+      status:
+        type: string
+    type: object
+  items_service.GetMonitoringUserActivityRequest:
+    properties:
+      end_date:
+        type: string
+      start_date:
+        type: string
+      user_id:
+        type: string
+    type: object
+  items_service.GetMonitoringUserActivityResponse:
+    properties:
+      eco_points_earned:
+        type: integer
+      item_listed:
+        type: integer
+      recycling_submissions:
+        type: integer
+      swap_completed:
+        type: integer
+      swap_initiated:
+        type: integer
+      user_id:
+        type: string
+    type: object
+  items_service.GetRatingRequest:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      user_id:
+        type: string
+    type: object
+  items_service.GetRatingResponse:
+    properties:
+      average_rating:
+        type: number
+      limit:
+        type: integer
+      page:
+        type: integer
+      ratings:
+        items:
+          $ref: '#/definitions/items_service.Rating'
+        type: array
+      total_ratings:
+        type: integer
+    type: object
+  items_service.GetStatisticsRequest:
+    properties:
+      EndDate:
+        type: string
+      startDate:
+        type: string
+      user_id:
+        type: string
+    type: object
+  items_service.GetStatisticsResponse:
+    properties:
+      top_categories:
+        items:
+          $ref: '#/definitions/items_service.TopCategory'
+        type: array
+      top_recycling_centers:
+        items:
+          $ref: '#/definitions/items_service.TopRecyclingCenter'
+        type: array
+      total_eco_points_earned:
+        type: integer
+      total_recycled_items:
+        type: integer
+      total_swaps:
+        type: integer
+    type: object
+  items_service.Item:
+    properties:
+      category_id:
+        type: string
+      condition:
+        type: string
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      owner_id:
+        type: string
+      status:
+        type: string
+      swap_preference:
+        type: string
+    type: object
+  items_service.ItemCategory:
+    properties:
+      created_at:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+  items_service.Itemes:
+    properties:
+      item_id:
+        type: string
+      material:
+        type: string
+      weight:
+        type: number
+    type: object
+  items_service.Rating:
+    properties:
+      comment:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      rater_id:
+        type: string
+      rating:
+        type: number
+      swap_id:
+        type: string
+      user_id:
+        type: string
+    type: object
+  items_service.RecyclingCenter:
+    properties:
+      accepted_materials:
+        type: string
+      address:
+        type: string
+      contact_number:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      working_hours:
+        type: string
+    type: object
+  items_service.SearchItemsAndFilterResponse:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/items_service.Item'
+        type: array
+      limit:
+        type: integer
+      page:
+        type: integer
+      total:
+        type: integer
+    type: object
+  items_service.SearchRecyclingCenterRequest:
+    properties:
+      limit:
+        type: integer
+      material:
+        type: string
+      page:
+        type: integer
+    type: object
+  items_service.SearchRecyclingCenterResponse:
+    properties:
+      limit:
+        type: integer
+      page:
+        type: integer
+      recycling_centers:
+        items:
+          $ref: '#/definitions/items_service.RecyclingCenter'
+        type: array
+      total:
+        type: integer
+    type: object
+  items_service.Swap:
+    properties:
+      id:
+        type: string
+      message:
+        type: string
+      offered_item_id:
+        type: string
+      owner_id:
+        type: string
+      requested_item_id:
+        type: string
+      requester_id:
+        type: string
+      status:
+        type: string
+      updated_at:
+        type: string
+    type: object
+  items_service.TopCategory:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      swap_count:
+        type: integer
+    type: object
+  items_service.TopRecyclingCenter:
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      submission_count:
+        type: integer
+    type: object
+  items_service.UpdateEcoChallengeResultRequest:
+    properties:
+      challengeId:
+        type: string
+      recycledItemsCount:
+        type: integer
+    type: object
+  items_service.UpdateEcoChallengeResultResponse:
+    properties:
+      challengeId:
+        type: string
+      recycledItemsCount:
+        type: integer
+      status:
+        type: string
+      updatedAt:
+        type: string
+      userId:
+        type: string
+    type: object
+  items_service.UpdateItemRequest:
+    properties:
+      category_id:
+        type: string
+      condition:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+      owner_id:
+        type: string
+      status:
+        type: string
+      swap_preference:
+        type: string
+    type: object
+  items_service.UpdateItemResponse:
+    properties:
+      item:
+        $ref: '#/definitions/items_service.Item'
+    type: object
+  items_service.UpdateRejectSwapRequest:
+    properties:
+      reason:
+        type: string
+      swap_id:
+        type: string
+    type: object
+  items_service.UpdateRejectSwapResponse:
+    properties:
+      swap:
+        $ref: '#/definitions/items_service.Swap'
+    type: object
+  items_service.UpdateSwapRequest:
+    properties:
+      id:
+        type: string
+      message:
+        type: string
+      offered_item_id:
+        type: string
+      owner_id:
+        type: string
+      requested_item_id:
+        type: string
+      requester_id:
+        type: string
+      status:
+        type: string
+    type: object
+  items_service.UpdateSwapResponse:
+    properties:
+      swap:
+        $ref: '#/definitions/items_service.Swap'
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: API service
+  version: "1.0"
+paths:
+  /api/v1/items:
+    get:
+      consumes:
+      - application/json
+      description: Get a paginated list of items from the inventory
+      parameters:
+      - description: Page number
+        in: query
+        name: page
+        required: true
+        type: integer
+      - description: Items per page
+        in: query
+        name: limit
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetItemsRequest'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get a list of items
+      tags:
+      - items
+    post:
+      consumes:
+      - application/json
+      description: Add a new item to the inventory
+      parameters:
+      - description: Create Item Request
+        in: body
+        name: item
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateItemRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateItemResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Add a new item
+      tags:
+      - items
+  /api/v1/items/{item_id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete an existing item from the inventory
+      parameters:
+      - description: Item ID
+        in: path
+        name: item_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Not Found
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Delete an item
+      tags:
+      - items
+    get:
+      consumes:
+      - application/json
+      description: Get an existing item from the inventory by its ID
+      parameters:
+      - description: Item ID
+        in: path
+        name: item_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetItemRequest'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Not Found
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get an item by ID
+      tags:
+      - items
+    put:
+      consumes:
+      - application/json
+      description: Edit an existing item in the inventory
+      parameters:
+      - description: Item ID
+        in: path
+        name: item_id
+        required: true
+        type: string
+      - description: Update Item Request
+        in: body
+        name: item
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.UpdateItemRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.UpdateItemResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "404":
+          description: Not Found
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Edit an item
+      tags:
+      - items
+  /api/v1/items/search:
+    get:
+      consumes:
+      - application/json
+      description: Search and filter items based on query parameters
+      parameters:
+      - description: Search query
+        in: query
+        name: query
+        type: string
+      - description: Category
+        in: query
+        name: category
+        type: string
+      - description: Condition
+        in: query
+        name: condition
+        type: string
+      - description: Page number
+        in: query
+        name: page
+        required: true
+        type: integer
+      - description: Items per page
+        in: query
+        name: limit
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.SearchItemsAndFilterResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Search and filter items
+      tags:
+      - items
+  /eco_challenges:
+    post:
+      consumes:
+      - application/json
+      description: Create a new eco challenge in the items service.
+      parameters:
+      - description: Create Eco Challenge Request
+        in: body
+        name: eco_challenge
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateEcoChallengeRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateEcoChallengeResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new eco challenge
+      tags:
+      - eco_challenges
+  /eco_challenges/participate:
+    post:
+      consumes:
+      - application/json
+      description: Participate in an eco challenge in the items service.
+      parameters:
+      - description: Create Participate Challenge Request
+        in: body
+        name: participate
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateParticipateChallengeRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateParticipateChallengeResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Participate in an eco challenge
+      tags:
+      - eco_challenges
+  /eco_challenges/result:
+    put:
+      consumes:
+      - application/json
+      description: Update the result of an eco challenge in the items service.
+      parameters:
+      - description: Update Eco Challenge Result Request
+        in: body
+        name: result
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.UpdateEcoChallengeResultRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.UpdateEcoChallengeResultResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Update the result of an eco challenge
+      tags:
+      - eco_challenges
+  /eco_tips:
+    get:
+      consumes:
+      - application/json
+      description: Get eco tips from the items service.
+      parameters:
+      - description: Get Add Eco Tips Request
+        in: body
+        name: eco_tips
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.GetAddEcoTipsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetAddEcoTipsResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get eco tips
+      tags:
+      - eco_tips
+    post:
+      consumes:
+      - application/json
+      description: Add new eco tips in the items service.
+      parameters:
+      - description: Create Eco Tip Request
+        in: body
+        name: eco_tips
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateEcoTipRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateEcoTipResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Add new eco tips
+      tags:
+      - eco_tips
+  /item_categories:
+    post:
+      consumes:
+      - application/json
+      description: Create a new item category in the items service.
+      parameters:
+      - description: Create Item Category Request
+        in: body
+        name: item_category
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateItemCategoryManageRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateItemCategoryManageResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new item category
+      tags:
+      - item_categories
+  /recycling_centers:
+    post:
+      consumes:
+      - application/json
+      description: Add a new recycling center in the items service.
+      parameters:
+      - description: Create Recycling Center Request
+        in: body
+        name: recycling_center
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateRecyclingCenterRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateRecyclingCenterResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Add a new recycling center
+      tags:
+      - recycling_centers
+  /recycling_centers/search:
+    post:
+      consumes:
+      - application/json
+      description: Search for recycling centers in the items service.
+      parameters:
+      - description: Search Recycling Center Request
+        in: body
+        name: recycling_center
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.SearchRecyclingCenterRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.SearchRecyclingCenterResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Search for recycling centers
+      tags:
+      - recycling_centers
+  /recycling_submissions:
+    post:
+      consumes:
+      - application/json
+      description: Create a new recycling submission in the items service.
+      parameters:
+      - description: Create Recycling Submissions Request
+        in: body
+        name: recycling_submission
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateRecyclingSubmissionsRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateRecyclingSubmissionsResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new recycling submission
+      tags:
+      - recycling_submissions
+  /statistics:
+    post:
+      consumes:
+      - application/json
+      description: Get statistics from the items service.
+      parameters:
+      - description: Get Statistics Request
+        in: body
+        name: statistics
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.GetStatisticsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetStatisticsResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get statistics
+      tags:
+      - statistics
+  /swaps:
+    post:
+      consumes:
+      - application/json
+      description: Create a new swap request in the items service.
+      parameters:
+      - description: Create Swap Request
+        in: body
+        name: swap
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateSwapRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateSwapResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Create a new swap request
+      tags:
+      - swaps
+  /swaps/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get a swap request by ID from the items service.
+      parameters:
+      - description: Get Change Swap Request
+        in: body
+        name: swap
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.GetChangeSwapRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetChangeSwapResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get a swap request by ID
+      tags:
+      - swaps
+  /swaps/accept:
+    put:
+      consumes:
+      - application/json
+      description: Accept a swap request in the items service.
+      parameters:
+      - description: Update Swap Request
+        in: body
+        name: swap
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.UpdateSwapRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.UpdateSwapResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Accept a swap request
+      tags:
+      - swaps
+  /swaps/reject:
+    put:
+      consumes:
+      - application/json
+      description: Reject a swap request in the items service.
+      parameters:
+      - description: Update Reject Swap Request
+        in: body
+        name: swap
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.UpdateRejectSwapRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.UpdateRejectSwapResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Reject a swap request
+      tags:
+      - swaps
+  /user_activity:
+    post:
+      consumes:
+      - application/json
+      description: Get user activity monitoring data from the items service.
+      parameters:
+      - description: Get Monitoring User Activity Request
+        in: body
+        name: activity
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.GetMonitoringUserActivityRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetMonitoringUserActivityResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get user activity monitoring data
+      tags:
+      - user_activity
+  /user_ratings:
+    get:
+      consumes:
+      - application/json
+      description: Get user ratings from the items service.
+      parameters:
+      - description: Get Rating Request
+        in: body
+        name: rating
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.GetRatingRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/items_service.GetRatingResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Get user ratings
+      tags:
+      - user_ratings
+    post:
+      consumes:
+      - application/json
+      description: Add a new user rating in the items service.
+      parameters:
+      - description: Create Rating Request
+        in: body
+        name: rating
+        required: true
+        schema:
+          $ref: '#/definitions/items_service.CreateRatingRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/items_service.CreateRatingResponse'
+        "400":
+          description: Bad Request
+          schema:
+            type: string
+        "500":
+          description: Internal Server Error
+          schema:
+            type: string
+      summary: Add a new user rating
+      tags:
+      - user_ratings
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

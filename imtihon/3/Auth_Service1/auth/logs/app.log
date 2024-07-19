@@ -1,0 +1,8 @@
+{"time":"2024-07-12T16:02:50.030662777+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-12T16:02:50.034152209+05:00","level":"INFO","msg":"Server is Running","PORT":":50051"}
+{"time":"2024-07-17T14:59:36.826776745+05:00","level":"ERROR","msg":"Error logging in user:","!BADKEY":"email or password is incorrect"}
+{"time":"2024-07-17T15:01:34.349477362+05:00","level":"ERROR","msg":"Error logging in user:","!BADKEY":"email or password is incorrect"}
+{"time":"2024-07-17T15:03:03.471636005+05:00","level":"ERROR","msg":"Error logging in user:","!BADKEY":"email or password is incorrect"}
+{"time":"2024-07-17T15:11:31.37331459+05:00","level":"ERROR","msg":"Error logging in user:","!BADKEY":"email or password is incorrect"}
+{"time":"2024-07-18T19:58:34.253412298+05:00","level":"ERROR","msg":"Failed to refresh token","!BADKEY":"invalid refresh token"}
+{"time":"2024-07-18T20:00:25.614173658+05:00","level":"ERROR","msg":"Failed to refresh token","!BADKEY":"invalid token expiry claim"}

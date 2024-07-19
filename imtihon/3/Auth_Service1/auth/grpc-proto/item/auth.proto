@@ -1,0 +1,179 @@
+syntax = "proto3";
+
+option go_package = "/genproto";
+
+package protos;
+
+message Void {}
+
+service AuthService {
+  rpc RegisterUser(RegisterUserReq) returns (Register) {} //POST /api/v1/auth/register
+  rpc LoginUser(LoginReq) returns (Token) {} //POST /api/v1/auth/login
+  rpc GetUser (ById) returns (Register) {} //GET /api/v1/users/profile
+  rpc UpdateUser(UpdateUserReq) returns (Register) {} //PUT /api/v1/users/profile-byid
+  rpc UpdateUserType(UserTypeReq) returns (UserTypeRes) {} //PUT /api/v1/users/type
+  rpc GetAllUsers(PageLimit) returns (GetAllUsersRes) {} //GET /api/v1/users?page=1&limit=10
+  rpc DeleteUser(ById) returns (Success) {} //DELETE /api/v1/users/{user_id}
+  rpc ResetPassword(ByEmail) returns (Success) {} //POST /api/v1/auth/reset-password
+  rpc RefreshToken (RefreshTokenReq) returns (Token) {} //POST /api/v1/auth/refresh
+  rpc Logout(LogoutReq) returns (LogoutRes) {} // POST /api/v1/auth/logout
+  rpc GetEcoPoints(ById) returns (EcoPointsBalance) {} // GET /api/v1/users/{user_id}/eco-points
+  rpc AddEcoPoints(AddEcoPointsReq) returns (AddEcoPointsRes) {} // POST /api/v1/users/{user_id}/eco-points
+  rpc GetEcoPointsHistory(PageLimit) returns (EcoPointsHistoryRes) {} // GET /api/v1/users/{user_id}/eco-points/history?page=1&limit=10
+
+}
+
+message RegisterUserReq {
+  string username = 1;
+  string email = 2;
+  string password = 3;
+  string full_name = 4;
+  string user_type = 5;
+  string bio = 6;
+}
+
+message Register {
+  string id = 1;
+  string username = 2;
+  string email = 3;
+  string full_name = 4;
+  string created_at = 5;
+  string bio = 6;
+  int64 eco_points = 7;
+  string updated_at = 8;
+}
+
+message LoginReq {
+  string email = 1;
+  string password = 2;
+}
+
+message RefreshTokenReq {
+  string refresh_token = 1;
+}
+
+message Token {
+  string access_token = 1;
+  string refresh_token = 2;
+  int64 expires_in = 3;
+}
+
+message ById {
+  string Id = 1;
+}
+
+message UserFilter {
+  string Id = 1;
+  string username = 2;
+  string email = 3;
+  string full_name = 4;
+  string user_type = 5;
+  string bio = 6;
+}
+
+message UpdateUserReq {
+  string id = 1;
+  string full_name = 2;
+  string bio = 3;
+}
+
+message UserTypeReq {
+  string user_type = 1;
+}
+
+message UserTypeRes {
+  string Id = 1;
+  string username = 2;
+  string user_type = 3;
+  string updated_at = 4;
+}
+
+message GetAllUsersRes {
+  repeated Register users = 1;
+  int64 total = 2;
+  int64 page = 3;
+  int64 limit = 4;
+}
+
+message PageLimit {
+  int64 limit = 1;
+  int64 page = 2;
+}
+
+message PageLimit1 {
+  int64 limit = 1;
+  int64 page = 2;
+  string userid = 3;
+}
+
+message ByEmail {
+  string email = 1;
+}
+message Success {
+  string Message = 1;
+}
+
+message EcoPointsBalance {
+  string user_id = 1;
+  int64 eco_points = 2;
+  string last_updated = 3;
+}
+
+message AddEcoPointsRequest {
+  int64 points = 1;
+  string reason = 2;
+}
+
+message AddEcoPointsResponse {
+  string user_id = 1;
+  int64 eco_points = 2;
+  int64 added_points = 3;
+  string reason = 4;
+  string timestamp = 5;
+}
+
+message EcoPointsHistoryItem {
+  string id = 1;
+  int64 points = 2;
+  string type = 3;
+  string reason = 4;
+  string timestamp = 5;
+}
+
+message EcoPointsHistoryResponse {
+  repeated EcoPointsHistoryItem history = 1;
+  int64 total = 2;
+  int64 page = 3;
+  int64 limit = 4;
+}
+
+message LogoutReq {
+  string access_token = 1;
+}
+
+//message LogoutRequest{
+//  string email = 1;
+//}
+
+
+message LogoutRes {
+  string message = 1;
+}
+message AddEcoPointsReq {
+  string user_id = 1;
+  int64 points = 2;
+  string reason = 3;
+}
+message AddEcoPointsRes {
+  string user_id = 1;
+  int64 eco_points = 2;
+  int64 added_points = 3;
+  string reason = 4;
+  string timestamp = 5;
+}
+message EcoPointsHistoryRes {
+  repeated EcoPointsHistoryItem history = 1;
+  int64 total = 2;
+  int64 page = 3;
+  int64 limit = 4;
+}

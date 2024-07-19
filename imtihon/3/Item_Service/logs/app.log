@@ -1,0 +1,164 @@
+{"time":"2024-07-17T18:59:22.468113113+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T18:59:22.468244941+05:00","level":"ERROR","msg":"Failed to listen","error":"listen tcp: address 50051: missing port in address"}
+{"time":"2024-07-17T19:00:26.9152519+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T19:00:26.915396432+05:00","level":"ERROR","msg":"Failed to listen","error":"listen tcp: address 50051: missing port in address"}
+{"time":"2024-07-17T19:02:25.651022817+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T19:02:25.651296566+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T19:27:19.780909+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T19:27:19.781142269+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T20:30:16.878805975+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T20:30:16.879046519+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T20:59:30.543721363+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T20:59:30.54395333+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:08:07.051797633+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:08:07.051975168+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:11:27.496306572+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:11:27.496596609+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:12:17.991919332+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:12:17.992101655+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:33:39.123415268+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:33:39.123683905+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:38:46.845132701+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:38:46.845422467+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:39:25.068692536+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:39:25.06890679+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:40:08.89896879+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:40:08.899248748+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:43:11.295114375+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:43:11.295354829+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-17T21:47:02.206409782+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-17T21:47:02.206584835+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:14:35.445088724+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:14:35.445354012+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:24:10.145443154+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:24:10.145674594+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:29:30.512953697+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:29:30.51319424+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:36:17.635073439+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:36:17.635342416+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:42:45.004326772+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:42:45.004560012+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:45:16.333501263+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:45:16.333813882+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:47:03.680639245+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:47:03.680925354+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:48:22.555700836+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:48:22.555969803+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:49:50.277188597+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:49:50.277370009+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:50:40.428069554+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:50:40.428282786+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:51:18.448002117+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:51:18.448281393+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:52:07.279262627+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:52:07.279441764+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:52:20.866205493+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:52:20.866450174+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T12:54:36.63106218+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T12:54:36.631244334+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:02:07.062162388+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:02:07.063639952+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:02:28.669143721+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:02:28.669571417+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:03:22.676375939+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:03:22.676663782+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:04:10.251009547+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:04:10.251192672+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:15:47.748739468+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:15:47.749035065+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:17:34.529788578+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:17:34.530078715+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:20:39.07427512+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:20:39.074505584+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:21:57.789597924+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:21:57.789774837+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:23:56.639242731+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:23:56.639512709+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:38:15.021223015+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:38:15.021405799+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:41:20.912813158+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:41:20.913002174+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:42:54.025140206+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:42:54.02532279+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T13:51:26.717857333+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T13:51:26.718342988+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T14:12:17.222692457+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T14:12:17.222981292+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T14:12:43.885524392+05:00","level":"ERROR","msg":"message update accept swap error -> pq: invalid input syntax for type uuid: \"\""}
+{"time":"2024-07-18T14:13:31.457444492+05:00","level":"ERROR","msg":"message update accept swap error -> pq: invalid input syntax for type uuid: \"\""}
+{"time":"2024-07-18T14:16:02.597271099+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T14:16:02.597526009+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T14:18:03.221092718+05:00","level":"ERROR","msg":"message update reject swap error -> pq: invalid input syntax for type uuid: \"\""}
+{"time":"2024-07-18T14:19:22.936687814+05:00","level":"ERROR","msg":"message get updated swap error -> sql: no rows in result set"}
+{"time":"2024-07-18T14:21:02.060635786+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T14:21:02.060938786+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T14:21:05.076877394+05:00","level":"ERROR","msg":"message get updated swap error -> sql: no rows in result set"}
+{"time":"2024-07-18T15:14:22.476218422+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:14:22.476467357+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:30:25.831285995+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:30:25.831470756+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:43:42.932758243+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:43:42.933052717+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:43:46.857116191+05:00","level":"ERROR","msg":"Error creating recycling center: sql: Scan error on column index 3, name \"accepted_materials\": unsupported Scan, storing driver.Value type []uint8 into type *[]string"}
+{"time":"2024-07-18T15:49:15.353652583+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:49:15.353949924+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:49:19.929335071+05:00","level":"ERROR","msg":"Error creating recycling center: pq: invalid input syntax for type json"}
+{"time":"2024-07-18T15:50:25.392688301+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:50:25.392982116+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:50:34.620319206+05:00","level":"ERROR","msg":"Error creating recycling center: pq: invalid input syntax for type json"}
+{"time":"2024-07-18T15:52:46.450045768+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:52:46.450342548+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:52:48.753997443+05:00","level":"ERROR","msg":"Error creating recycling center: sql: converting argument $3 type: unsupported type []string, a slice of string"}
+{"time":"2024-07-18T15:55:30.174842975+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:55:30.175140858+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:57:53.40353491+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T15:57:53.403729277+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T15:57:56.292477713+05:00","level":"ERROR","msg":"Error creating recycling submission: pq: invalid input syntax for type uuid: \"center123\""}
+{"time":"2024-07-18T16:05:00.824211691+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:05:00.824508412+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:06:41.907793238+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:06:41.90797921+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:07:28.261572309+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:07:28.261884269+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:07:30.664424809+05:00","level":"ERROR","msg":"Error adding user rating: sql: Scan error on column index 2, name \"rater_id\": converting NULL to string is unsupported"}
+{"time":"2024-07-18T16:08:50.418863724+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:08:50.419187005+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:13:53.489214388+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:13:53.489443072+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:18:43.265482698+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:18:43.265777899+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:18:47.025551578+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:18:47.025787869+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:18:50.17795005+05:00","level":"ERROR","msg":"Error fetching ratings: pq: invalid input syntax for type uuid: \"user123\""}
+{"time":"2024-07-18T16:19:07.83286169+05:00","level":"ERROR","msg":"Error scanning rating: sql: Scan error on column index 1, name \"rater_id\": converting NULL to string is unsupported"}
+{"time":"2024-07-18T16:21:21.436365693+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:21:21.436557332+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:21:24.055330941+05:00","level":"ERROR","msg":"Error fetching ratings: pq: invalid input syntax for type uuid: \"\""}
+{"time":"2024-07-18T16:22:52.312604217+05:00","level":"ERROR","msg":"Error fetching ratings: pq: invalid input syntax for type uuid: \"\""}
+{"time":"2024-07-18T16:23:01.005878437+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:23:01.00614683+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:23:11.415926181+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:23:11.41612306+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:43:54.39721001+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:43:54.397520205+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:53:44.271426211+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:53:44.27167843+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T16:57:07.75902677+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T16:57:07.759455031+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T17:48:23.690458328+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T17:48:23.690755695+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T17:53:38.268940705+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T17:53:38.26924775+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T17:56:51.386482437+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T17:56:51.386737946+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T17:59:59.733328771+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T17:59:59.73358959+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T18:00:52.513593259+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T18:00:52.51388697+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T18:17:41.76056679+05:00","level":"ERROR","msg":"Error getting total eco points earned: sql: Scan error on column index 0, name \"sum\": converting NULL to int32 is unsupported"}
+{"time":"2024-07-18T19:25:41.444216059+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T19:25:41.444515659+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T19:37:22.181598345+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T19:37:22.181793091+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
+{"time":"2024-07-18T21:22:24.836026131+05:00","level":"INFO","msg":"Starting the server"}
+{"time":"2024-07-18T21:22:24.836355594+05:00","level":"INFO","msg":"Server is Running","PORT":"50051"}
